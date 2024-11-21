@@ -6,4 +6,3 @@ __pycache__/
 *.txt
 !requirements.txt
 config.py
-/docs
