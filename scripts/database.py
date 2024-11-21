@@ -94,6 +94,7 @@ class DatabaseManager:
             count = cursor.fetchone()[0]
             conn.close()
             return count == 0  # True if the table is empty
+
         except sqlite3.Error as e:
             print(f"Error checking if database is empty: {e}")
             return True  # Assume empty if there's an error
@@ -101,10 +102,12 @@ class DatabaseManager:
     def insert_play(self, track_id, track_name, artist, album, year, duration_ms, explicit, popularity, played_at, session_id=None):
         conn = sqlite3.connect(self.database_path)
         cursor = conn.cursor()
+
         cursor.execute('''
         INSERT INTO plays (track_id, track_name, artist, album, year, duration_ms, explicit, popularity, played_at, session_id)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (track_id, track_name, artist, album, year, duration_ms, explicit, popularity, played_at, session_id))
+
         conn.commit()
         conn.close()
 
@@ -126,6 +129,7 @@ class DatabaseManager:
         # Filter out consecutive duplicates
         filtered_plays = []
         last_track_id = None
+
         for play in plays:
             if play[0] != last_track_id:
                 filtered_plays.append(play)
@@ -136,6 +140,7 @@ class DatabaseManager:
     def get_most_recent_play_timestamp(self):
         conn = sqlite3.connect(self.database_path)
         cursor = conn.cursor()
+
         cursor.execute("SELECT MAX(played_at) FROM plays")
         latest_played_at = cursor.fetchone()[0]
         conn.close()

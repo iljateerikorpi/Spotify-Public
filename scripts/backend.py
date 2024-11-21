@@ -29,6 +29,7 @@ class SpotifyManager:
                 cache_handler=cache_handler,
             ))
             self.current_scope = scope  # Update the current scope
+
         return self.sp
 
     def fetch_user_playlists(self):
@@ -41,6 +42,7 @@ class SpotifyManager:
         playlists = self.sp.user_playlists(user=user_id, limit=limit, offset=offset)
         playlist_items = playlists['items']
         user_playlists = []
+
         for playlist in playlist_items:
             owner = playlist['owner']
             if owner['id'] == user_id:
@@ -63,6 +65,7 @@ class SpotifyManager:
         while True:
             results = self.sp.playlist_items(playlist_id, offset=offset, limit=limit, additional_types='track')
             tracks = results['items']
+
             if not tracks:
                 break
             all_tracks.extend(tracks)
@@ -109,12 +112,15 @@ class SpotifyManager:
                 print(f"Searching for: {query}")
                 result = self.sp.search(q=query, type='track', limit=1,
                                         offset=0)
+
                 if result['tracks']['items']:
                     print(
                         f"Found track: {result['tracks']['items'][0]['name']}")
                     return result['tracks']['items'][0]['uri']
+
                 else:
                     print(f"No match found for {song} by {artist}")
+
                 return None
 
             song_uris = []
@@ -125,6 +131,7 @@ class SpotifyManager:
                         sniffer = csv.Sniffer()
                         separator = sniffer.sniff(sample).delimiter
                         file.seek(0)
+
                     except _csv.Error:
                         return False, "Error detecting the separator. Enter separator manually."
 
@@ -144,6 +151,7 @@ class SpotifyManager:
                                                             description=playlist_description)
                 self.sp.playlist_add_items(new_playlist['id'], song_uris)
                 return True, f"Playlist '{playlist_name}' created successfully with {len(song_uris)} songs."
+
             else:
                 return False, "No songs found in the file."
 
@@ -152,18 +160,22 @@ class SpotifyManager:
 
     def make_playlist_private(self, playlist):
         self.authenticate_spotify("playlist-modify-public playlist-modify-private")
+
         try:
             self.sp.playlist_change_details(playlist['id'], public=False)
             return True, f"Playlist {playlist['name']} has been made private."
+
         except spotipy.exceptions.SpotifyException as e:
             return False, f"Error making playlist private: {e}"
 
     def remove_playlist(self, playlist):
         self.authenticate_spotify("playlist-modify-public playlist-modify-private")
         success = self.make_playlist_private(playlist)
+
         try:
             self.sp.current_user_unfollow_playlist(playlist['id'])
             return success[0], True, f"{success[1]}\nPlaylist {playlist['name']} removed from your library."
+
         except spotipy.exceptions.SpotifyException as e:
             return success[0], False, f"{success[1]}\nError removing playlist: {e}"
 
@@ -189,6 +201,7 @@ class SpotifyManager:
             rows = [[track['name'], track['artists'][0]['name'],
                      track['album']['name'], track['popularity']]
                     for track in top_items]
+
         elif item_type == 'artists':
             top_items = self.sp.current_user_top_artists(limit=limit,
                                                          time_range=time_range)[
@@ -197,6 +210,7 @@ class SpotifyManager:
             rows = [[artist['name'], ", ".join(artist['genres']),
                      artist['popularity']]
                     for artist in top_items]
+
         else:
             raise ValueError("item_type must be 'tracks' or 'artists'.")
 
@@ -248,6 +262,7 @@ class SpotifyManager:
                     break
 
             return filtered_tracks
+
         except spotipy.exceptions.SpotifyException as e:
             print(f"Error fetching recent tracks: {e}")
             return []
@@ -288,8 +303,10 @@ class SpotifyManager:
 
             except FileNotFoundError:
                 print(f"Error: The file '{file}' was not found.")
+
             except csv.Error as e:
                 print(f"Error reading CSV file at line {reader.line_num}: {e}")
+
             except Exception as e:
                 print(f"An unexpected error occurred: {e}")
 
