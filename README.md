@@ -1,4 +1,6 @@
 # Spotify Manager
+[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 
 This project uses Spotify's API to track recently played songs and manage playlists by downloading songs or creating new playlists from a text file. To use the Spotify API, you need to set up a configuration file with your Spotify credentials.
 
@@ -17,6 +19,7 @@ pip install -r requirements.txt
 ```bash
 project_root/
 ├── README.md
+├── LICENSE
 ├── requirements.txt
 ├── .gitignore
 ├── config.py
@@ -75,3 +78,7 @@ Song Name (Live), Artist Name
 ```
 In the above example, "feat. Featured Artist" and "(Live)" should be removed, as only the main artist and the song name should be provided.
 
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.  
+You can view the full license [here](https://creativecommons.org/licenses/by-nc/4.0/).
