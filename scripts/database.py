@@ -160,6 +160,7 @@ class DatabaseManager:
 
         # Creates a new table if one does not exist
         self._create_table()
+        print("Database check complete.")
 
     def _create_table(self):
         conn = sqlite3.connect(self.database_path)
@@ -183,4 +184,3 @@ class DatabaseManager:
 
         conn.commit()
         conn.close()
-        print(f"Database initialized at {self.database_path}")
