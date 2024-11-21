@@ -82,3 +82,7 @@ In the above example, "feat. Featured Artist" and "(Live)" should be removed, as
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.  
 You can view the full license [here](https://creativecommons.org/licenses/by-nc/4.0/).
+
+## Author
+
+Created and maintained by [Ilja Teerikorpi](https://github.com/iljateerikorpi).  
