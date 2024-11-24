@@ -241,6 +241,11 @@ class SpotifyManager:
                 if not played_at:
                     continue  # Skip tracks without 'played_at'
 
+                # Normalize the timestamp to always include fractional seconds
+                if played_at.endswith('Z') and '.' not in played_at:
+                    played_at = played_at.replace('Z', '.001Z')
+
+                # Parse the normalized timestamp
                 played_at = datetime.strptime(played_at,"%Y-%m-%dT%H:%M:%S.%fZ")
 
                 # Check for consecutive duplicates
