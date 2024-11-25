@@ -8,14 +8,18 @@ from datetime import datetime
 import os
 
 class SpotifyManager:
-    def __init__(self):
+    def __init__(self, get_playlists=False):
         self.database_manager = DatabaseManager()
         self.database_manager.check_and_backup()
 
         self.sp = None
         self.current_scope = None  # Track the current scope
         self.current_playlist = None
-        self.playlists = self.fetch_user_playlists()
+
+        if get_playlists:
+            self.playlists = self.fetch_user_playlists()
+        else:
+            self.playlists = None
 
     def authenticate_spotify(self, scope=None):
         """Authenticate with Spotify and return a Spotipy client."""
