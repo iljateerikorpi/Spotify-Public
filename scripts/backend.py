@@ -48,6 +48,9 @@ class SpotifyManager:
         user_playlists = []
 
         for playlist in playlist_items:
+            if playlist is None:
+                continue
+
             owner = playlist['owner']
             if owner['id'] == user_id:
                 user_playlists.append(playlist)
