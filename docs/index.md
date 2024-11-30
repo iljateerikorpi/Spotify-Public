@@ -5,7 +5,7 @@
 Welcome
 
 <iframe 
-    src="/assets/dashboard.html" 
+    src="https://iljateerikorpi.github.io/Spotify-Public/dashboard.html" 
     width="100%" 
     height="600" 
     frameborder="0" 
