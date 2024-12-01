@@ -35,7 +35,7 @@ The command-line application does however offer a couple of additional tools tha
 - Create a playlist from a csv file.
 - Delete a playlist.
 - Save top items to a csv file.
-- View last played tracks (up to 50)
+- View last played tracks (up to 50).
 
 ---
 
@@ -52,10 +52,13 @@ The application code is available on GitHub: [iljateerikorpi](https://github.com
 
 ## Results
 
+For privacy reasons, the entire dataset will not be displayed. However, select insights and analyses from November 2024 will be showcased to demonstrate the project's capabilities.
+
+### Power BI dashboard
 <iframe 
     src="https://iljateerikorpi.github.io/Spotify-Public/assets/dashboard.html" 
     width="100%" 
-    height="1000" 
+    height="2000" 
     frameborder="0" 
     allowfullscreen>
 </iframe>
