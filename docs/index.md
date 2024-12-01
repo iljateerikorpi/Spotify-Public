@@ -57,9 +57,7 @@ For privacy reasons, the entire dataset will not be displayed. However, select i
 ### Power BI dashboard
 <iframe 
     src="https://iljateerikorpi.github.io/Spotify-Public/assets/dashboard.html" 
-    width="100%" 
-    height="2000" 
-    frameborder="0" 
+    style="width: 80vw; max-width: 1500px; aspect-ratio: 16 / 10; border: 0;"
     allowfullscreen>
 </iframe>
 
