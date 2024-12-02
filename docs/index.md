@@ -37,6 +37,8 @@ The command-line application does however offer a couple of additional tools tha
 - Save top items to a csv file.
 - View last played tracks (up to 50).
 
+I included these features, because they allow for multiple use-cases and sometimes even deleting playlists from the Spotify app won't work. They also act as building blocks for future improvements.
+
 ---
 
 ## Technologies Used
@@ -52,14 +54,35 @@ The application code is available on GitHub: [iljateerikorpi](https://github.com
 
 ## Results
 
-For privacy reasons, the entire dataset will not be displayed. However, select insights and analyses from November 2024 will be showcased to demonstrate the project's capabilities.
+For privacy reasons, the entire dataset will not be displayed. However, select insights and analyses from November 2024 will be showcased with select artists to demonstrate the project's capabilities.
+
+### Excel
+
+Excel was primarily used as a source for Power BI, Excel is useful for quick insights.
+
+A pivot table is a quick and dynamic way to get insights from data. In this pivot table, using slicers, I take a look at how many minutes I listened to Drake in November and from what songs the number consists of.
+
+![Excel pivot table](assets/Excel_pivot_table.png)
+
+Now using some Excel functions I can gather information about which Drake albums I listened to the most.
+
+![Albums](assets/Excel_albums.png)
+
+Finally I can create a quick table and chart from the gathered information and gain a good visual on when the bulk of my most listened to Drake songs were released.
+
+![Table and chart](assets/Excel_table_and_chart.png)
 
 ### Power BI dashboard
-<iframe 
-    src="https://iljateerikorpi.github.io/Spotify-Public/assets/dashboard.html" 
-    style="width: 80vw; max-width: 1500px; aspect-ratio: 16 / 10; border: 0;"
-    allowfullscreen>
-</iframe>
+
+With Power BI, I can have a deeper insight into my listening habits. These screenshots show how the interactive dashboard works.
+
+![Power BI dashboard](assets/Power_BI_1.png)
+
+When you select artists, their corresponding data will be displayed.
+
+![Dashboard with selections](assets/Power_BI_2.png)
+
+*For licensing reasons, I decided to not embed the dashboard, and just include screenshots.*
 
 ---
 
