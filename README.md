@@ -27,6 +27,7 @@ project_root/
 │   ├── spotify_plays.db           # Database file(s)
 │   └── csv_backups/               # Directory for CSV backups
 └── scripts/
+    ├── automation_scripts/        # Only for reference (not included in requirements)
     ├── backend.py                 # Main logic for interacting with Spotify API
     ├── database.py                # DatabaseManager class
     └── cli.py                     # Command-line interface script
