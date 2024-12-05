@@ -10,8 +10,9 @@ Welcome
 1. [About the Project](#about-the-Project)
 2. [Command-Line Application Features](#command-line-application-features)
 3. [Technologies Used](#technologies-used)
-4. [Results](#results)
-5. [Contact](#contact)
+4. [Architecture](#architecture)
+5. [Results](#results)
+6. [Contact](#contact)
 
 ---
 
@@ -51,6 +52,41 @@ These features serve multiple use cases, offering practical tools while laying t
 - **Power BI:** Used for creating dynamic and interactive visualizations.
 
 The application code is available on [GitHub](https://github.com/iljateerikorpi/Spotify-Public).
+
+---
+
+## Architecture
+
+### Overview
+
+The system architecture is built around interconnected components designed to facilitate seamless tracking, storage, and additional functionality. 
+At its core lies the SpotifyManager class, which serves as the central hub for managing all interactions with the Spotify API and the system's features.
+
+### Workflow diagram
+
+![Architecture](assets/Architecture.png)
+
+### Key components
+
+- **Command-Line Interface:** Provides a user-friendly interface to access and control various features of the application.
+- **Backend:** Powered by the 'SpotifyManager' class, which orchestrates interactions between the API, database, and other components to deliver core functionality.
+- **Spotify API:** Spotify API: Works in tandem with the 'SpotifyManager' class to fetch data, manage playlists, and perform other Spotify-related operations.
+- **Database:** Managed by the 'DatabaseManager', which acts as the bridge between the backend and the database. It also ensures data integrity by creating regular backups.
+
+### Automation
+
+Highlighted in purple is the optional automation script, designed to streamline processes by bypassing user interaction. A sample script is available on GitHub for reference.
+
+### Data analysis
+
+To generate insights from the collected data, both Excel and Power BI were utilized.
+Excel provides quick, actionable insights through pivot tables and built-in functions, while also serving as a data source for Power BI.
+For more detailed and interactive visualizations, Power BI is employed, enabling deeper exploration of listening trends.
+
+![Results_workflow](assets/Results_workflow.png)
+
+Since SQLite databases are not natively supported by Excel or Power BI, a Python script is used to automate the data export process. An example script is available on GitHub for reference.
+Once the Python script initializes the Excel table, it can be reused for future updates. After the data is successfully exported to Excel, it becomes readily accessible for use in Power BI, streamlining the analysis workflow.
 
 ---
 
