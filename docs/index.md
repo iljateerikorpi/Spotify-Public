@@ -1,8 +1,6 @@
-# THIS SITE IS A WORK IN PROGRESS
+# Spotify Project
 
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](https://creativecommons.org/licenses/by-nc/4.0/)
-
-Welcome
 
 ---
 
@@ -69,9 +67,9 @@ At its core lies the SpotifyManager class, which serves as the central hub for m
 ### Key components
 
 - **Command-Line Interface:** Provides a user-friendly interface to access and control various features of the application.
-- **Backend:** Powered by the 'SpotifyManager' class, which orchestrates interactions between the API, database, and other components to deliver core functionality.
-- **Spotify API:** Spotify API: Works in tandem with the 'SpotifyManager' class to fetch data, manage playlists, and perform other Spotify-related operations.
-- **Database:** Managed by the 'DatabaseManager', which acts as the bridge between the backend and the database. It also ensures data integrity by creating regular backups.
+- **Backend:** Powered by the `SpotifyManager` class, which orchestrates interactions between the API, database, and other components to deliver core functionality.
+- **Spotify API:** Spotify API: Works in tandem with the `SpotifyManager` class to fetch data, manage playlists, and perform other Spotify-related operations.
+- **Database:** Managed by the `DatabaseManager`, which acts as the bridge between the backend and the database. It also ensures data integrity by creating regular backups.
 
 ### Automation
 
@@ -136,3 +134,5 @@ For any inquiries or to learn more about this project, feel free to get in touch
 ---
 
 Thank you for visiting this page! Check out the [GitHub repository](https://github.com/iljateerikorpi/Spotify-Public) for more details.
+
+*The page was last updated on 5.12.2024.*
