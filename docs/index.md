@@ -8,7 +8,7 @@ Welcome
 
 ## Table of Contents
 1. [About the Project](#about-the-Project)
-2. [Features](#features)
+2. [Command-Line Application Features](#command-line-application-features)
 3. [Technologies Used](#technologies-used)
 4. [Results](#results)
 5. [Contact](#contact)
@@ -17,27 +17,29 @@ Welcome
 
 ## About the Project
 
-The point of the project is to track, analyze, and visualize my Spotify listening habits to showcase skills in Python, Excel, and Power BI.
-The project started because I wanted to have a deeper insight into my Spotify listening habits, but outside from the annual Spotify wrapped, Spotify does not share any data.
-The solution was to implement automatic tracking of songs I listened to and gathering my own data.
+This project focuses on tracking, analyzing, and visualizing my Spotify listening habits to showcase my skills in Python, Excel, and Power BI. 
+It began as a way to gain deeper insights into my music preferences since Spotify only provides limited data through its annual Wrapped feature. 
+To address this limitation, I developed a system for automatically tracking the songs I listen to, enabling me to collect and analyze my own data.
 
 ---
 
-## Features
+## Command-Line Application Features
 
-The main feature of the simple command-line application is to enable the user to fetch recently played songs and store them in a database.
+The core functionality of this command-line application is to fetch recently played songs and store them in a database.
 
-You can also use the SpotifyManager class to run a script that only fetches and stores the tracks without any interaction. This way you can automate the process.
+Additionally, the user can leverage the `SpotifyManager` class to run a script that fetches and stores tracks without user interaction. This feature makes the process fully automated.
 
-The command-line application does however offer a couple of additional tools that can be useful:
-- View all the users owned playlists.
-- Download a playlist to a csv file.
-- Create a playlist from a csv file.
-- Delete a playlist.
-- Save top items to a csv file.
-- View last played tracks (up to 50).
+The command-line application also includes several additional tools designed for flexibility and convenience:
 
-I included these features, because they allow for multiple use-cases and sometimes even deleting playlists from the Spotify app won't work. They also act as building blocks for future improvements.
+- **View all owned playlists**: Explore all playlists associated with your account.  
+- **Download a playlist to a CSV file**: Export playlist data for further analysis or backup.  
+- **Create a playlist from a CSV file**: Easily generate new playlists from CSV data.  
+- **Delete a playlist**: Remove playlists directly, even when the Spotify app encounters issues.  
+- **Save top items to a CSV file**: Export your top tracks or artists for deeper insights.  
+- **View last played tracks (up to 50)**: Quickly review your most recently played songs.
+
+These features serve multiple use cases, offering practical tools while laying the groundwork for future enhancements. Whether for troubleshooting or expanding functionality, they make managing Spotify data more efficient and customizable.
+
 
 ---
 
@@ -48,41 +50,41 @@ I included these features, because they allow for multiple use-cases and sometim
 - **Excel:** Employed for comprehensive data analysis and reporting.
 - **Power BI:** Used for creating dynamic and interactive visualizations.
 
-The application code is available on GitHub: [iljateerikorpi](https://github.com/iljateerikorpi)
+The application code is available on [GitHub](https://github.com/iljateerikorpi/Spotify-Public).
 
 ---
 
 ## Results
 
-For privacy reasons, the entire dataset will not be displayed. However, select insights and analyses from November 2024 will be showcased with select artists to demonstrate the project's capabilities.
+To maintain privacy, the complete dataset will not be shared. Instead, curated insights and analyses from November 2024 will be presented, highlighting select artists to showcase the project's capabilities and potential.
 
-### Excel
+### Excel Analysis: Quick Insights
 
-Excel was primarily used as a source for Power BI, Excel is useful for quick insights.
+While Excel primarily served as a source for Power BI, it also proved invaluable for quick insights into my listening data.
 
-A pivot table is a quick and dynamic way to get insights from data. In this pivot table, using slicers, I take a look at how many minutes I listened to Drake in November and from what songs the number consists of.
+A pivot table is a dynamic tool for extracting insights efficiently. In this example, using slicers, I analyzed how many minutes I listened to Drake in November and identified the specific songs that contributed to this total.
 
 ![Excel pivot table](assets/Excel_pivot_table.png)
 
-Now using some Excel functions I can gather information about which Drake albums I listened to the most.
+By leveraging Excel functions, I further explored which Drake albums I listened to the most during this period.
 
 ![Albums](assets/Excel_albums.png)
 
-Finally I can create a quick table and chart from the gathered information and gain a good visual on when the bulk of my most listened to Drake songs were released.
+Finally, I created a simple table and chart from the collected data to visualize when the majority of my most-played Drake songs were released.
 
 ![Table and chart](assets/Excel_table_and_chart.png)
 
-### Power BI dashboard
+### Power BI Dashboard
 
-With Power BI, I can have a deeper insight into my listening habits. These screenshots show how the interactive dashboard works.
+Power BI provides deeper insights into my listening habits through an interactive and dynamic dashboard. These screenshots demonstrate its functionality:
 
 ![Power BI dashboard](assets/Power_BI_1.png)
 
-When you select artists, their corresponding data will be displayed.
+When specific artists are selected, their corresponding data is displayed, offering a focused view of listening trends.
 
 ![Dashboard with selections](assets/Power_BI_2.png)
 
-*For licensing reasons, I decided to not embed the dashboard, and just include screenshots.*
+*For licensing reasons, the dashboard is not embedded directly on this site. Instead, screenshots are provided for demonstration purposes.*
 
 ---
 
