@@ -75,7 +75,8 @@ At its core lies the SpotifyManager class, which serves as the central hub for m
 
 ### Automation
 
-Highlighted in purple is the optional automation script, designed to streamline processes by bypassing user interaction. A sample script is available on GitHub for reference.
+Highlighted in purple is the optional automation script, designed to streamline processes by bypassing user interaction. 
+A sample script is available on [GitHub](https://github.com/iljateerikorpi/Spotify-Public/tree/main/scripts/automation%20scripts) for reference.
 
 ### Data analysis
 
@@ -85,7 +86,7 @@ For more detailed and interactive visualizations, Power BI is employed, enabling
 
 ![Results_workflow](assets/Results_workflow.png)
 
-Since SQLite databases are not natively supported by Excel or Power BI, a Python script is used to automate the data export process. An example script is available on GitHub for reference.
+Since SQLite databases are not natively supported by Excel or Power BI, a Python script is used to automate the data export process. An example script is available on [GitHub](https://github.com/iljateerikorpi/Spotify-Public/tree/main/scripts/automation%20scripts) for reference.
 Once the Python script initializes the Excel table, it can be reused for future updates. After the data is successfully exported to Excel, it becomes readily accessible for use in Power BI, streamlining the analysis workflow.
 
 ---
