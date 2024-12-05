@@ -1,6 +1,7 @@
 # Spotify Manager
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](https://creativecommons.org/licenses/by-nc/4.0/)
 
+[Link to project page](https://iljateerikorpi.github.io/Spotify-Public/)
 
 This project uses Spotify's API to track recently played songs and manage playlists by downloading songs or creating new playlists from a text file. To use the Spotify API, you need to set up a configuration file with your Spotify credentials.
 
