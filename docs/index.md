@@ -58,7 +58,7 @@ The application code is available on [GitHub](https://github.com/iljateerikorpi/
 ### Overview
 
 The system architecture is built around interconnected components designed to facilitate seamless tracking, storage, and additional functionality. 
-At its core lies the SpotifyManager class, which serves as the central hub for managing all interactions with the Spotify API and the system's features.
+At its core lies the `SpotifyManager` class, which serves as the central hub for managing all interactions with the Spotify API and the system's features.
 
 ### Workflow diagram
 
