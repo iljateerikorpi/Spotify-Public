@@ -129,7 +129,7 @@ For any inquiries or to learn more about this project, feel free to get in touch
 
 - **GitHub**: [iljateerikorpi](https://github.com/iljateerikorpi)
 - **LinkedIn**: [Ilja Teerikorpi](https://www.linkedin.com/in/ilja-teerikorpi-a67377318/)
-- **Email**: iljateerikorpi@gmail.com
+- **Email**: teerikorpiilja&#43;project&#64;gmail&#46;com
 
 ---
 
