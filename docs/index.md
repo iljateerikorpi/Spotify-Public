@@ -136,4 +136,4 @@ For any inquiries or to learn more about this project, feel free to get in touch
 
 Thank you for visiting this page! Check out the [GitHub repository](https://github.com/iljateerikorpi/Spotify-Public) for more details.
 
-*The page was last updated on 5.12.2024.*
+*The page was last updated on 10.12.2024.*
